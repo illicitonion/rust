@@ -108,6 +108,21 @@ pub fn register_builtin_macros(resolver: &mut dyn ResolverExpand, edition: Editi
         RustcEncodable: encodable::expand_deriving_rustc_encodable,
     }
 
+    other(edition)
+
     let client = proc_macro::bridge::client::Client::expand1(proc_macro::quote);
     register(sym::quote, SyntaxExtensionKind::Bang(Box::new(BangProcMacro { client })));
+}
+
+#[cfg(bootstrap)]
+fn other(edition: Edition) {
+    resolver.register_builtin_macro(
+        Ident::with_dummy_span(Symbol::intern("DwhMacro")),
+        SyntaxExtension { is_builtin: true, ..SyntaxExtension::default(SyntaxExtensionKind::LegacyDerive(Box::new(BuiltinDerive(into::expand_deriving_into))), edition) },
+    )
+}
+
+#[not(cfg(bootstrap))]
+fn other(_edition: Edition) {
+
 }

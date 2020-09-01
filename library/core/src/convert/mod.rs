@@ -292,6 +292,14 @@ pub trait Into<T>: Sized {
     fn into(self) -> T;
 }
 
+#[cfg(bootstrap)]
+#[rustc_builtin_macro]
+#[stable(feature = "builtin_macro_prelude_dwh", since = "1.48.0")]
+#[allow_internal_unstable(core_intrinsics)]
+pub macro DwhMacro($item:item) {
+/* compiler built-in */
+}
+
 /// Used to do value-to-value conversions while consuming the input value. It is the reciprocal of
 /// [`Into`].
 ///

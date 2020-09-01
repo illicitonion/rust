@@ -21,6 +21,7 @@ pub use crate::mem::drop;
 #[stable(feature = "rust1", since = "1.0.0")]
 #[doc(no_inline)]
 pub use crate::convert::{AsMut, AsRef, From, Into};
+
 #[stable(feature = "rust1", since = "1.0.0")]
 #[doc(no_inline)]
 pub use crate::iter::{DoubleEndedIterator, ExactSizeIterator};
@@ -53,6 +54,13 @@ pub use core::prelude::v1::{
     bench, global_allocator, test, test_case, Clone, Copy, Debug, Default, Eq, Hash, Ord,
     PartialEq, PartialOrd, RustcDecodable, RustcEncodable,
 };
+
+#[cfg(bootstrap)]
+#[stable(feature = "builtin_macro_prelude_dwh", since = "1.48.0")]
+#[allow(deprecated)]
+#[doc(hidden)]
+pub use core::prelude::v1::DwhMacro;
+
 
 #[unstable(
     feature = "cfg_accessible",

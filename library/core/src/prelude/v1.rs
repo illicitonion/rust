@@ -52,6 +52,10 @@ pub use crate::fmt::macros::Debug;
 #[stable(feature = "builtin_macro_prelude", since = "1.38.0")]
 #[doc(no_inline)]
 pub use crate::hash::macros::Hash;
+#[cfg(bootstrap)]
+#[stable(feature = "builtin_macro_prelude_dwh", since = "1.48.0")]
+#[doc(no_inline)]
+pub use crate::convert::DwhMacro;
 
 #[stable(feature = "builtin_macro_prelude", since = "1.38.0")]
 #[allow(deprecated)]

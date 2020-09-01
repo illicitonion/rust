@@ -135,6 +135,7 @@ symbols! {
         Decodable,
         Decoder,
         Default,
+        DwhMacro,
         Encodable,
         Encoder,
         Eq,
