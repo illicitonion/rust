@@ -155,6 +155,7 @@ symbols! {
         Hasher,
         Implied,
         Input,
+        Into,
         IntoIterator,
         Is,
         ItemContext,

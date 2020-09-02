@@ -281,6 +281,15 @@ pub trait Into<T>: Sized {
     fn into(self) -> T;
 }
 
+/// Derive macro generating an impl of the trait `Into` for primitive enums.
+#[cfg(not(bootstrap))]
+#[rustc_builtin_macro]
+#[stable(feature = "builtin_macro_prelude", since = "1.38.0")]
+#[allow_internal_unstable(core_intrinsics)]
+pub macro Into($item:item) {
+    /* compiler built-in */
+}
+
 /// Used to do value-to-value conversions while consuming the input value. It is the reciprocal of
 /// [`Into`].
 ///

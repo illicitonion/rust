@@ -1,0 +1,26 @@
+error[FIXME]: `Into` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-bad.rs:5:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-bad.rs:9:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-bad.rs:17:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: aborting due to 3 previous errors
+
