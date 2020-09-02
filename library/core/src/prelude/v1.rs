@@ -28,7 +28,17 @@ pub use crate::clone::Clone;
 pub use crate::cmp::{Eq, Ord, PartialEq, PartialOrd};
 #[stable(feature = "core_prelude", since = "1.4.0")]
 #[doc(no_inline)]
-pub use crate::convert::{AsMut, AsRef, From, Into};
+pub use crate::convert::{AsMut, AsRef, From};
+
+#[cfg(bootstrap)]
+#[stable(feature = "core_prelude", since = "1.4.0")]
+#[doc(no_inline)]
+pub use crate::convert::Into;
+#[cfg(not(bootstrap))]
+#[stable(feature = "builtin_macro_prelude", since = "1.38.0")]
+#[doc(no_inline)]
+pub use crate::convert::Into;
+
 #[stable(feature = "core_prelude", since = "1.4.0")]
 #[doc(no_inline)]
 pub use crate::default::Default;

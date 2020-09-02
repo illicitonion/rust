@@ -20,7 +20,18 @@ pub use crate::mem::drop;
 // Re-exported types and traits
 #[stable(feature = "rust1", since = "1.0.0")]
 #[doc(no_inline)]
-pub use crate::convert::{AsMut, AsRef, From, Into};
+pub use crate::convert::{AsMut, AsRef, From};
+
+#[cfg(bootstrap)]
+#[stable(feature = "rust1", since = "1.0.0")]
+#[doc(no_inline)]
+pub use core::prelude::v1::Into;
+#[cfg(not(bootstrap))]
+#[stable(feature = "builtin_macro_prelude", since = "1.38.0")]
+#[allow(deprecated)]
+#[doc(hidden)]
+pub use core::prelude::v1::Into;
+
 #[stable(feature = "rust1", since = "1.0.0")]
 #[doc(no_inline)]
 pub use crate::iter::{DoubleEndedIterator, ExactSizeIterator};

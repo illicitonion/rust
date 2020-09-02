@@ -1,0 +1,58 @@
+error[FIXME]: `Into` can only be derived for enums
+  --> $DIR/deriving-into-bad.rs:5:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-bad.rs:9:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-bad.rs:17:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for data-free enums
+  --> $DIR/deriving-into-bad.rs:24:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for data-free enums
+  --> $DIR/deriving-into-bad.rs:32:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for data-free enums
+  --> $DIR/deriving-into-bad.rs:40:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `Into` can only be derived for data-free enums
+  --> $DIR/deriving-into-bad.rs:48:10
+   |
+LL | #[derive(Into)]
+   |          ^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: aborting due to 7 previous errors
+
