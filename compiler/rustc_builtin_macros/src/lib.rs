@@ -101,6 +101,7 @@ pub fn register_builtin_macros(resolver: &mut dyn ResolverExpand, edition: Editi
         Default: default::expand_deriving_default,
         Eq: eq::expand_deriving_eq,
         Hash: hash::expand_deriving_hash,
+        IntoUnderlying: into_underlying::expand_deriving_into_underlying,
         Ord: ord::expand_deriving_ord,
         PartialEq: partial_eq::expand_deriving_partial_eq,
         PartialOrd: partial_ord::expand_deriving_partial_ord,

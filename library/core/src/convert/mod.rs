@@ -8,6 +8,8 @@
 //! - Implement the [`From`] trait for consuming value-to-value conversions
 //! - Implement the [`Into`] trait for consuming value-to-value conversions to types
 //!   outside the current crate
+//! - Implement the [`IntoUnderlying`] trait for cheaply consuming a value which wraps, or is
+//!   represented by, another value.
 //! - The [`TryFrom`] and [`TryInto`] traits behave like [`From`] and [`Into`],
 //!   but should be implemented when the conversion can fail.
 //!
@@ -279,6 +281,29 @@ pub trait Into<T>: Sized {
     /// Performs the conversion.
     #[stable(feature = "rust1", since = "1.0.0")]
     fn into(self) -> T;
+}
+
+/// Used to consume a type with a natural underlying representation into that representation.
+/// This trait should only be implemented where conversion is trivial; for non-trivial conversions,
+/// prefer to implement [`Into`].
+#[stable(feature = "into_underlying", since = "1.49.0")]
+pub trait IntoUnderlying {
+    /// The underlying type.
+    #[stable(feature = "into_underlying", since = "1.49.0")]
+    type Underlying;
+
+    /// Performs the conversion.
+    #[stable(feature = "into_underlying", since = "1.49.0")]
+    fn into_underlying(self) -> Self::Underlying;
+}
+
+/// Derive macro generating an impl of the trait `IntoUnderlying`.
+#[cfg(not(bootstrap))]
+#[rustc_builtin_macro]
+#[stable(feature = "into_underlying", since = "1.49.0")]
+#[allow_internal_unstable(core_intrinsics)]
+pub macro IntoUnderlying($item:item) {
+    /* compiler built-in */
 }
 
 /// Used to do value-to-value conversions while consuming the input value. It is the reciprocal of

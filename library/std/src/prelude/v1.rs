@@ -33,6 +33,10 @@ pub use crate::option::Option::{self, None, Some};
 #[stable(feature = "rust1", since = "1.0.0")]
 #[doc(no_inline)]
 pub use crate::result::Result::{self, Err, Ok};
+#[cfg(not(bootstrap))]
+#[stable(feature = "into_underlying", since = "1.48.0")]
+#[doc(no_inline)]
+pub use core::convert::IntoUnderlying;
 
 // Re-exported built-in macros
 #[stable(feature = "builtin_macro_prelude", since = "1.38.0")]

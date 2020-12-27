@@ -156,6 +156,7 @@ symbols! {
         Implied,
         Input,
         IntoIterator,
+        IntoUnderlying,
         Is,
         ItemContext,
         Iterator,

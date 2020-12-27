@@ -1,0 +1,26 @@
+error[FIXME]: `IntoUnderlying` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-underlying-bad.rs:5:10
+   |
+LL | #[derive(IntoUnderlying)]
+   |          ^^^^^^^^^^^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `IntoUnderlying` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-underlying-bad.rs:9:10
+   |
+LL | #[derive(IntoUnderlying)]
+   |          ^^^^^^^^^^^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[FIXME]: `IntoUnderlying` can only be derived for enums with an explicit integer representation
+  --> $DIR/deriving-into-underlying-bad.rs:17:10
+   |
+LL | #[derive(IntoUnderlying)]
+   |          ^^^^^^^^^^^^^^
+   |
+   = note: this error originates in a derive macro (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: aborting due to 3 previous errors
+
