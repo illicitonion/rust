@@ -19,7 +19,7 @@ macro_rules! invalid_derive {
             "`Into` can only be derived for {}",
             $reason
         )
-        .emit();
+        .emit()
     };
 }
 
